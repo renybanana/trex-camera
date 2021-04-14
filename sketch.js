@@ -74,7 +74,7 @@ function draw() {
   background(255);
   textSize(20)
   fill("black")
-  text("Score: "+ score, displayWidth/1.2, displayHeight/737743248);
+  text("Score: "+ score, displayWidth/1.2, displayHeight/7);
   
     
   
@@ -132,7 +132,7 @@ function draw() {
 function spawnClouds() {
   //write code here to spawn the clouds
   if (frameCount % 50 === 0) {
-    var cloud = createSprite(displayWidth/1, displayHeight/200000);
+    var cloud = createSprite(displayWidth/1, displayHeight/2);
     cloud.y = Math.round(random(10,100));
     cloud.addImage(cloudImage);
     cloud.scale = 0.7;
@@ -153,7 +153,7 @@ function spawnClouds() {
 
 function spawnObstacles() {
   if(frameCount % 60 === 0) {
-    var obstacle = createSprite(displayWidth/1, displayHeight/5.5);
+    var obstacle = createSprite(displayWidth/1, displayHeight/6.5);
     //obstacle.debug = true;
     obstacle.velocityX = -(10 + 3*score/100);
     
